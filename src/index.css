@@ -11,56 +11,11 @@ body {
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
 }
+/* HEADER START */
 
-.wrapper {
-  position: relative;
-  margin: 50px auto;
-  width: 1280px;
-}
+/* СТИЛИ КОРЗИНЫ (ВНУТРИ) */
 
-header {
-  margin-bottom: 70px;
-}
-
-header nav {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 25px;
-}
-
-header .logo {
-  font-weight: 600;
-  font-size: 20px;
-}
-
-header .list {
-  display: flex;
-  justify-content: space-between;
-  width: 40%;
-  list-style: none;
-}
-
-header .list li {
-  cursor: pointer;
-  transition: opacity 500ms ease;
-}
-
-header .list li:hover {
-  opacity: 0.5;
-}
-
-header .shop-cart-button {
-  cursor: pointer;
-  transition: color, transform 500ms ease;
-}
-
-header .shop-cart-button:hover,
-header .shop-cart-button.active {
-  color: palevioletred;
-  transform: scale(1.5);
-}
-
-.shop-card {
+/* .shop-card {
   position: absolute;
   top: 30px;
   right: 0;
@@ -116,12 +71,15 @@ header .shop-card .sum {
   width: 100%;
   margin-bottom: 20px;
   font-weight: 600;
-}
+} */
 
-header .presentation {
+/* ОБЯЗАТЕЛЬНО ЧТО-ТО С ЭТИМ СДЕЛАТЬ */
+.presentation {
   position: relative;
-  margin: 50px 0;
+  margin: 20px 0;
   width: 100%;
+  width: 1280px;
+
   height: 550px;
   background: url("./img/presentation2.jpg") no-repeat;
   background-size: cover;
@@ -130,15 +88,17 @@ header .presentation {
   background-color: #bcbcbc;
 }
 
-header .presentation::after {
+.presentation::after {
   position: absolute;
   right: 150px;
   top: 150px;
   content: "it's so delicious";
   font-weight: 600;
 }
+/* presentation ends */
 
-.categories div {
+/* КАТЕГОРИИ */
+/* .categories div {
   display: inline-block;
   margin-bottom: 25px;
   margin-right: 15px;
@@ -166,34 +126,24 @@ header .presentation::after {
   overflow: auto;
 }
 
-.full-item>div{
+.full-item > div {
   position: relative;
   width: 600px;
-  
+
   margin: 10% auto;
   padding: 40px 30px;
   background: white;
   border-radius: 10px;
 }
-.full-item>div>img{
+.full-item > div > img {
   height: auto;
-}
+} */
 
-main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 100%;
-}
+/* categories ends */
 
-main .item {
-  position: relative;
-  margin-bottom: 50px;
-  padding-bottom: 20px;
-  width: 30%;
-  background: #f5f5f5;
-}
-main .item img,
+
+/* какой-то фул */
+/* main .item img,
 .full-item img {
   height: 400px;
   width: 100%;
@@ -205,18 +155,18 @@ main .item img,
 main .item img:hover,
 .full-item img:hover {
   transform: scale(1.05);
-}
+} */
 
-main h2,
+/* main h2,
 .full-item h2,
 main p,
 .full-item p,
 main b,
 .full-item b {
   margin: 20px 20px;
-}
+} */
 
-main .add-to-cart,
+/* main .add-to-cart,
 .full-item .add-to-cart {
   position: absolute;
   bottom: 20px;
@@ -236,4 +186,4 @@ main .add-to-cart,
 main .add-to-cart:hover,
 .full-item .add-to-car:hover {
   transform: scale(1.4) translateY(-5px);
-}
+} */

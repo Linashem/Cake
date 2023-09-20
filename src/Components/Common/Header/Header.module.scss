@@ -1,0 +1,42 @@
+.header {
+  //   margin-bottom: 70px;
+  .wrapper {
+    position: relative;
+    margin: 50px auto;
+    width: 1280px;
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 25px;
+      .logo {
+        font-weight: 600;
+        font-size: 20px;
+      }
+      .list {
+        display: flex;
+        justify-content: space-between;
+        width: 40%;
+        list-style: none;
+        .list_item {
+          cursor: pointer;
+          transition: opacity 500ms ease;
+        }
+        .list_item:hover {
+          opacity: 0.5;
+        }
+        .list_btn {
+          /* header .shop-cart-button {
+  cursor: pointer;
+  transition: color, transform 500ms ease;
+}
+
+header .shop-cart-button:hover,
+header .shop-cart-button.active {
+  color: palevioletred;
+  transform: scale(1.5);
+} */
+        }
+      }
+    }
+  }
+}

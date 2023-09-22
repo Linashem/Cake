@@ -1,20 +1,26 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { removeGoodsReducerActions } from "./store/cartGoodsReducer";
 
 export const GoodsInCart = () => {
   const goods = useSelector((state) => state.goodsInCart.goodsInCart);
+  const dispatch = useDispatch();
+  const removeGoodInCart = (item) => {
+    console.log(item.id);
+    dispatch(removeGoodsReducerActions(item.id));
+  };
 
   return (
     <>
       <div>
         {goods.length > 0 ? (
           goods.map((el) => (
-            <div>
-              
-              <h2>{el.title}</h2>
-              <p>{el.desc}</p>
-              <b>{el.price}$</b>
-            </div>
+            <>
+              <div>{el}</div>
+            
+              {/* console.log(el); */}
+               <button onClick={() => removeGoodInCart(el)}>x</button> 
+            </>
           ))
         ) : (
           <h1>sorry</h1>

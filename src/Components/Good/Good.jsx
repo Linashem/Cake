@@ -44,16 +44,18 @@ export const Good = (props) => {
   };
 
   const addGoodInCart = (item) => {
+    // console.log(item.id);
     dispatch(cartGoodsReducerActions(item));
   };
 
   const removeGoodInCart = (item) => {
+    // console.log(item.id);
     dispatch(removeGoodsReducerActions(item.id));
   };
 
   return (
     <>
-      <div className={style.item} key={props.good.id}>
+      <div className={style.item}>
         <img className={style.item_img} src={props.good.img} alt={""} />
         <h2 className={style.item_title}>{props.good.title}</h2>
         <p className={style.item_desc}>{props.good.desc}</p>
@@ -63,28 +65,18 @@ export const Good = (props) => {
             <div
               onClick={() =>
                 addGoodInCart(
-                  { props }
-                  // <>
-                  //   {/* <img src={props.good.img} alt={""} /> */}
-                  //   <h2>{props.good.title}</h2>
-                  //   <p>{props.good.desc}</p>
-                  //   <b>{props.good.price}$</b>
-                  //   <button
-                  //     onClick={() =>
-                  //       removeGoodInCart(
-                  //         <>
-                  //           {props.good.id}
-                  //           {/* <img src={props.good.img} alt={""} /> */}
-                  //           <h2>{props.good.title}</h2>
-                  //           <p>{props.good.desc}</p>
-                  //           <b>{props.good.price}$</b>
-                  //         </>
-                  //       )
-                  //     }
-                  //   >
-                  //     x
-                  //   </button>
-                  // </>
+                  // // { props }
+                  <div>
+                    id={props.good.id}
+                    {/* <img src={props.good.img} alt={""} /> */}
+                    <h2>{props.good.title}</h2>
+                    <p>{props.good.desc}</p>
+                    <b>{props.good.price}$</b>
+                    {props.id}
+                    <button onClick={() => removeGoodInCart(props.good)}>
+                      x
+                    </button>
+                  </div>
                 )
               }
             >

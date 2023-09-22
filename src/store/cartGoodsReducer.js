@@ -15,7 +15,11 @@ export const cartGoodsReducer = (state = defaultState, action) => {
     case removeGoods:
       return {
         ...state,
-        goodsInCart: state.goodsInCart.filter((el) => el.id !== action.payload),
+        goodsInCart: state.goodsInCart.filter((el) =>
+        //  el.id !== 2
+        console.log(el)
+         ),
+       
       };
     default:
       return state;

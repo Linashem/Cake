@@ -4,7 +4,7 @@ const defaultState = {
   goodsInCart: [],
   goods: goodData,
 };
-const goodsInShop = "goodsInShop";
+// const goodsInShop = "goodsInShop";
 const addGoods = "addGoods";
 const removeGoods = "removeGoods";
 
@@ -20,14 +20,14 @@ export const cartGoodsReducer = (state = defaultState, action) => {
         ...state,
         goodsInCart: state.goodsInCart.filter((el) => el.id!==  action.payload),
       };
-    case goodsInShop:
-      return { ...state };
+    // case goodsInShop:
+    //   return { ...state };
     default:
       return state;
   }
 };
 
-export const GoodsActions =(payload)=>({type:goodsInShop, payload})
+// export const GoodsActions =(payload)=>({type:goodsInShop, payload})
 
 export const cartGoodsReducerActions = (payload) => ({
   type: addGoods,

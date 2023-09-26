@@ -1,5 +1,6 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Counter } from "./Components/Counter";
 import { removeGoodsReducerActions } from "./store/cartGoodsReducer";
 import { cartDecrementAction } from "./store/cartReducer";
 
@@ -13,6 +14,7 @@ export const GoodsInCart = () => {
   const deliteGood = () => {
     dispatch(cartDecrementAction());
   };
+
   return (
     <>
       <div>
@@ -21,8 +23,11 @@ export const GoodsInCart = () => {
             <>
               <div>{noel.id}</div>
               <h3>{noel.title}</h3>
+
+              <Counter item={noel} />
+
               <div onClick={deliteGood}>
-                <button onClick={() => removeGoodInCart(noel.id)}>x</button>
+                <button onClick={() => removeGoodInCart(noel.id)}></button>
               </div>
             </>
           ))

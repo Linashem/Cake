@@ -16,6 +16,7 @@ export const Goods = () => {
             <p className={style.item_desc}>{el.desc}</p>
             <b className={style.item_price}>{el.price}$</b>
             <Good el={el} />
+
           </div>
         </>
       ))}

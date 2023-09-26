@@ -1,13 +1,11 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import {
-  cartGoodsReducerActions,
-  removeGoodsReducerActions,
-} from "../../store/cartGoodsReducer";
+import { useDispatch, useSelector } from "react-redux";
+import { cartGoodsReducerActions } from "../../store/cartGoodsReducer";
 import {
   cartDecrementAction,
   cartIncrementAction,
 } from "../../store/cartReducer";
+import { goodInGoogAction } from "../../store/inCartReducer";
 import style from "./Good.module.scss";
 
 export const Good = (props) => {
@@ -21,7 +19,13 @@ export const Good = (props) => {
     dispatch(cartDecrementAction());
   };
 
-  const [cart, setCart] = useState(true);
+  const inCart = useSelector((state) => state.inCart.inCart);
+
+  const [cart, setCart] = useState({ inCart });
+  const goodInCart = () => {
+    dispatch(goodInGoogAction(!count && setCart((prev) => !prev)));
+  };
+
   const [count, setCount] = useState(0);
 
   let countHandlerIncrement = () => {
@@ -50,30 +54,17 @@ export const Good = (props) => {
 
   return (
     <>
-      <div onClick={() => cartHandler()}>
+      <div onClick={() => goodInCart()}>
         {cart ? (
-          <div
-            onClick={() =>
-              addGoodInCart( props.el)
-            }
-          >
+          <div onClick={() => addGoodInCart(props.el)}>
             <div className={style.add_to_cart} onClick={addGood}>
               <div onClick={() => countHandlerIncrement()}>+</div>
             </div>
           </div>
         ) : (
-          <div>
-            <div onClick={() => deliteGood()}>
-              <button onClick={() => countHandlerDecrement()}>-</button>
-            </div>
-            <div> {count}</div>
-            <div onClick={addGood}>
-              <button onClick={() => countHandlerIncrement()}>+</button>
-            </div>
-          </div>
+          <p>good in cart</p>
         )}
       </div>
-      {/* </div> */}
     </>
   );
 };

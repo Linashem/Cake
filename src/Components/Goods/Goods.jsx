@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 
-import { Good } from "../Good/Good";
+import { CartOnGood } from "../CartOnGood/CartOnGood";
 import style from "./Goods.module.scss";
 
 export const Goods = () => {
@@ -15,7 +15,7 @@ export const Goods = () => {
             <h2 className={style.item_title}>{el.title}</h2>
             <p className={style.item_desc}>{el.desc}</p>
             <b className={style.item_price}>{el.price}$</b>
-            <Good el={el} />
+            <CartOnGood el={el} />
 
           </div>
         </>

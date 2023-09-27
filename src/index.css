@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;0,800;1,500&family=Montserrat:wght@300;400;600&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Fuggles&family=Jost:ital,wght@0,400;0,500;0,800;1,500&family=Montserrat:wght@300;400;600&family=Pacifico&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +11,17 @@ body {
   font-family: "Montserrat", sans-serif;
   font-weight: 300;
 }
+
+a {
+  text-decoration: none;
+  color: #222;
+  cursor: pointer;
+
+}
+a:hover {
+  opacity: 0.5;
+}
+
 /* HEADER START */
 
 /* СТИЛИ КОРЗИНЫ (ВНУТРИ) */
@@ -78,7 +89,7 @@ header .shop-card .sum {
   position: relative;
   margin: 20px 0;
   width: 100%;
-  width: 1280px;
+  max-width: 1280px;
 
   height: 550px;
   background: url("./img/presentation2.jpg") no-repeat;

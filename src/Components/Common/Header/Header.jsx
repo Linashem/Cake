@@ -22,7 +22,9 @@ export default function Header() {
             </Link>
           </div>
           <ul className={style.list}>
-            <li className={style.list_item}>Shop</li>
+            <li className={style.list_item}>
+              <Link to={routes.shop}>Shop</Link>
+            </li>
             <li className={style.list_item}>Delivery</li>
             <li className={style.list_item}>About us</li>
             {/* <button className={style.list_btn} onClick={() => visibleHandler()}>

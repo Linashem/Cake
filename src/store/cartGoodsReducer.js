@@ -1,8 +1,8 @@
-import { goodData } from "../listOfGoods";
+// import { goodData } from "../listOfGoods";
 
 const defaultState = {
   goodsInCart: [],
-  goods: goodData,
+  // goods: goodData,
 };
 // const goodsInShop = "goodsInShop";
 const addGoods = "addGoods";

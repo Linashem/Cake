@@ -1,0 +1,21 @@
+.star_block {
+  position: relative;margin-left: 20px;
+  width: 140px;
+  height: 22px;
+  display: flex;
+  justify-content: space-between;
+}
+.star_btns {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.star,
+.star_btn {
+  width: 22px;
+  height: 22px;
+}

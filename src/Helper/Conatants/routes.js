@@ -1,6 +1,7 @@
 export const routes = {
   home: '/',
-  cart:'/cart'
+  cart:'/cart',
+  shop:'/shop'
 
   // oneGood: '/shop/:goodId',
 

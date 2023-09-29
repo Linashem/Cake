@@ -1,0 +1,16 @@
+.count_wrapper {
+  display: flex;
+  align-items: center;
+  width: 90px;
+  justify-content: space-between;
+  button {
+    border: none;
+  }
+  .char {
+    width: 20px;
+    height: 20px;
+  }
+  .minus {
+    width: 30px;
+  }
+}

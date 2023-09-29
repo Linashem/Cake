@@ -39,7 +39,10 @@ export const CartOnGood = (props) => {
             </div>
           </div>
         ) : (
-          <p>good in cart</p>
+          <div>
+          <img className={style.cart} src="img/svg/in-cart.svg" alt="good in cart" />
+
+          </div>
         )}
       </div>
     </>

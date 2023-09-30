@@ -33,16 +33,18 @@ export const GoodsInCart = () => {
                 <Counter item={el} />
 
                 <div onClick={deliteGood}>
-                  <button className={style.cross} onClick={() => removeGoodInCart(el.id)}>
-            <img  src="img/svg/cross.svg" alt="x" />
-
+                  <button
+                    className={style.cross}
+                    onClick={() => removeGoodInCart(el.id)}
+                  >
+                    <img src="img/svg/cross.svg" alt="x" />
                   </button>
                 </div>
               </div>
             </>
           ))
         ) : (
-          <h1>No goods in cart yeat</h1>
+          <h1>No goods in cart yet</h1>
         )}
       </div>
     </>

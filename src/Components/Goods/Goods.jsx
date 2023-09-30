@@ -8,11 +8,12 @@ import style from "./Goods.module.scss";
 
 export const Goods = () => {
   const goods = useSelector((state) => state.goods.goods);
+  const dispatch = useDispatch();
+
   const [good, setGoods] = useState([]);
   useEffect(() => {
-
-    setGoods(goods)
-  }, [])
+    dispatch(goodsActions(setGoods(goods)));
+  }, []);
   return (
     <div className={style.goods_cards}>
       {good.map((el) => (
@@ -21,7 +22,7 @@ export const Goods = () => {
             <img className={style.item_img} src={el.img} alt={""} />
             <h2 className={style.item_title}>{el.title}</h2>
             <p className={style.item_desc}>{el.desc}</p>
-            <Stars/>
+            <Stars />
             <div className={style.item_footer}>
               <b className={style.item_price}>{el.price}$</b>
               <CartOnGood el={el} />

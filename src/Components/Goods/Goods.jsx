@@ -10,8 +10,9 @@ import style from "./Goods.module.scss";
 import { oneGoodActions } from "../../store/oneGoodReduser";
 
 export const Goods = () => {
-  const goods = useSelector((state) => state.goods.goods);
+  const goods = useSelector((state) => state.goods.categoryGoods);
   const dispatch = useDispatch();
+
 
   const goToGood = (item) => {
     dispatch(oneGoodActions(item));
@@ -26,9 +27,9 @@ export const Goods = () => {
               <img className={style.item_img} src={el.img} alt={""} />
             </Link>
             <div className={style.text}>
-            <Link to={routes.good} onClick={() => goToGood(el)}>
-              <h2 className={style.item_title}>{el.title}</h2>
-            </Link>
+              <Link to={routes.good} onClick={() => goToGood(el)}>
+                <h2 className={style.item_title}>{el.title}</h2>
+              </Link>
               <p className={style.item_desc}>{el.desc}</p>
               <Stars />
               <div className={style.item_footer}>

@@ -19,9 +19,16 @@
     .item_img:hover {
       transform: scale(1.05);
     }
-    .item_title,
-    .item_desc {
-      margin: 20px 20px;
+    // .item_title,
+    // .item_desc {
+    //   margin: 20px 20px;
+    // }
+    .text {
+      padding: 20px;
+      .item_title,
+      .item_desc {
+        margin: 20px 0;
+      }
     }
     .item_footer {
       padding: 0 20px;

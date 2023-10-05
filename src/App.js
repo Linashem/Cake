@@ -1,9 +1,8 @@
-import { Provider } from "react-redux";
+
 import { Route, Routes } from "react-router-dom";
-// import Header from "./Components/Common/Header/Header";
 import { Pagewrapper } from "./Components/Common/PageWrapper";
 import { GoodsInCart } from "./Components/GoodsInCart/GoodsInCart";
-// import { Goods } from "./Components/Goods";
+import { OneGood } from "./Components/OneGood/OneGood";
 import { Main } from "./Containers/Main";
 import { Shop } from "./Containers/Shop";
 import { routes } from "./Helper/Conatants/routes";
@@ -16,6 +15,7 @@ function App() {
           <Route index element={<Main />} />
           <Route path={routes.cart} element={<GoodsInCart/>}/>
           <Route path={routes.shop} element={<Shop/>}/>
+          <Route path={routes.good}  element={<OneGood/>} />
 
         </Route>
       </Routes>

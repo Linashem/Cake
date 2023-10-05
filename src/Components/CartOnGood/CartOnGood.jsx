@@ -35,6 +35,7 @@ export const CartOnGood = (props) => {
         {cart ? (
           <div onClick={() => addGoodInCart(props.el)}>
             <div  onClick={addGood}>
+              
               <div  className={style.add_to_cart}   onClick={() => countHandlerIncrement()}>+</div>
             </div>
           </div>

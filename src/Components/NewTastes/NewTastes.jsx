@@ -1,4 +1,8 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
+import { routes } from "../../Helper/Conatants/routes";
+import { categoryActions, newTasteActions } from "../../store/goodsReducer";
 import style from "./NewTastes.module.scss";
 
 export const NewTastes = () => {
@@ -7,6 +11,14 @@ export const NewTastes = () => {
   // const goToGood = (item) => {
   //   dispatch(oneGoodActions(item));
   // };
+  const dispatch = useDispatch();
+
+  // const chooseCategory = (cat) => {
+  //   dispatch(categoryActions(cat));
+  // };
+  const goToNew = (el) => {
+    dispatch(newTasteActions(el));
+  };
 
   return (
     <div className={style.taste_wrapper}>
@@ -25,7 +37,10 @@ export const NewTastes = () => {
         </div>
       </div>
 
-      <button></button>
+      <button onClick={() => goToNew("newTaste")}>
+        {" "}
+        <Link to={routes.shop}>BUTTON</Link> 
+      </button>
     </div>
   );
 };

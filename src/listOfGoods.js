@@ -6,6 +6,7 @@ export const goodData = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget hendrerit odio, non ultrices lorem. Donec vel vestibulum eros. Curabitur fringilla arcu varius.",
     price: 1000,
     img: "./img/1.jpg",
+    newTaste: true
   },
   {
     id: 2,
@@ -22,6 +23,8 @@ export const goodData = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget hendrerit odio, non ultrices lorem. Donec vel vestibulum eros. Curabitur fringilla arcu varius.",
     price: 1000,
     img: "./img/3.jpg",
+    newTaste: true
+
   },
   {
     id: 4,
@@ -46,6 +49,8 @@ export const goodData = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget hendrerit odio, non ultrices lorem. Donec vel vestibulum eros. Curabitur fringilla arcu varius.",
     price: 1000,
     img: "./img/6.jpg",
+    newTaste: true
+
   },
   {
     id: 7,

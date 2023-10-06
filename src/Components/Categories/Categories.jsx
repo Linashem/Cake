@@ -2,7 +2,8 @@ import style from "./Categories.module.scss";
 
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { categoryActions } from "../../store/goodsReducer";
+import { categoryActions, newTasteActions } from "../../store/goodsReducer";
+import { NewTastes } from "../NewTastes/NewTastes";
 
 export const Categories = () => {
   const categories = [
@@ -36,6 +37,11 @@ export const Categories = () => {
     dispatch(categoryActions('all'));
    
   }, []);
+
+  useEffect(()=>{
+    dispatch(newTasteActions(true))
+  }, [<NewTastes/>])
+
   return (
     <div>
       {categories.map((el) => (

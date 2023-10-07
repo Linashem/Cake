@@ -5,7 +5,6 @@ import { NewTastes } from "./NewTastes/NewTastes";
 export const MainContent = () => {
   return (
     <>
-      {/* <Goods/> */}
       <Carousel />
       <NewTastes/>
     </>

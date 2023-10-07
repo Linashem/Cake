@@ -26,14 +26,13 @@ export const goodsReducer = (state = defaultState, action) => {
               return el.category === action.payload;
             }
           }
-          // el.category === action.payload
         ),
       };
-    case newTaste:
-      return {
-        ...state,
-        categoryGoods: state.goods.filter((el) => el.newTaste ),
-      };
+    // case newTaste:
+    //   return {
+    //     ...state,
+    //     categoryGoods: state.goods.filter((el) => el.newTaste ),
+    //   };
     default:
       return state;
   }
@@ -43,10 +42,10 @@ export const goodsActions = () => ({
   type: goods,
 });
 
-export const newTasteActions = (payload) => ({
-  type: newTaste,
-  payload,
-});
+// export const newTasteActions = (payload) => ({
+//   type: newTaste,
+//   payload,
+// });
 
 export const categoryActions = (payload) => ({
   type: category,

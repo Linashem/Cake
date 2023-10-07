@@ -107,23 +107,8 @@ header .shop-card .sum {
 } */
 /* presentation ends */
 
-/* КАТЕГОРИИ */
-/* .categories div {
-  display: inline-block;
-  margin-bottom: 25px;
-  margin-right: 15px;
-  padding: 10px 20px;
-  background-color: #ffe8faa7;
-  border-radius: 50px;
-  cursor: pointer;
-  border: 1px solid transparent;
-  transition: all 500ms ease;
-}
 
-.categories div:hover {
-  border-color: pink;
-  transform: scale(1.1);
-}
+/* 
 
 .full-item {
   position: fixed;

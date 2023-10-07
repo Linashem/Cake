@@ -1,0 +1,20 @@
+.categories_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+  .category {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #ffe8faa7;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 500ms ;
+  }
+  .category:hover {
+    border-color: pink;
+    transform: scale(1.1);
+  }
+}

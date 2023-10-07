@@ -34,18 +34,19 @@ export const Categories = () => {
     dispatch(categoryActions(cat));
   };
   useEffect(() => {
-    dispatch(categoryActions('all'));
-   
+    dispatch(categoryActions("all"));
   }, []);
 
-  useEffect(()=>{
-    dispatch(newTasteActions(true))
-  }, [<NewTastes/>])
+  // useEffect(()=>{
+  //   dispatch(newTasteActions(true))
+  // }, [<NewTastes/>])
 
   return (
-    <div>
+    <div className={style.categories_wrapper}>
       {categories.map((el) => (
-        <button key={el.key}  onClick={()=>chooseCategory(el.name)} >{el.name}</button>
+        <button className={style.category} key={el.key} onClick={() => chooseCategory(el.name)}>
+          {el.name}
+        </button>
       ))}
     </div>
   );

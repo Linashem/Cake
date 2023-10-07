@@ -1,4 +1,4 @@
-import { goodData } from "../listOfGoods";
+import { goodData } from "../Helper/arrays/listOfGoods";
 
 const defaultState = {
   goods: goodData,

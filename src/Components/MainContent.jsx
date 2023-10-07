@@ -6,9 +6,9 @@ import { NewTastes } from "./NewTastes/NewTastes";
 export const MainContent = () => {
   return (
     <>
-      {/* <Carousel /> */}
-      {/* <NewTastes/> */}
-      <Comments/>
+      <Carousel />
+      <NewTastes/>
+      {/* <Comments/> */}
     </>
   );
 };

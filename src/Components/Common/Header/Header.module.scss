@@ -44,49 +44,70 @@
         .list_item:hover {
           opacity: 0.5;
         }
+      }
 
-        .cart {
-          position: relative;
-          display: flex;
-          gap: 10px;
-          align-items: center;
-          height: 45px;
-          img {
-            width: 30px;
-            transition: transform 500ms ease;
-          }
-          img:hover {
-            transform: scale(1.4) translateY(-5px);
-          }
-          .cart_score {
-            position: absolute;
-            left: 20px;
-            top: 0;
-            background-color: #ffbbbc;
-            width: 25px;
-            height: 25px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            line-height: 0;
-            font-size: 14px;
-            border-radius: 50px;
-            border: 2px solid white;
-          }
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+      }
+      .cart {
+        position: relative;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        height: 45px;
+        img {
+          width: 30px;
+          transition: transform 500ms ease;
         }
+        img:hover {
+          transform: scale(1.4) translateY(-5px);
+        }
+        .cart_score {
+          position: absolute;
+          left: 20px;
+          top: 0;
+          background-color: #ffbbbc;
+          width: 25px;
+          height: 25px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          line-height: 0;
+          font-size: 14px;
+          border-radius: 50px;
+          border: 2px solid white;
+        }
+      }
 
-        // .list_btn {
-        /* header .shop-cart-button {
-  cursor: pointer;
-  transition: color, transform 500ms ease;
-}
+      .user {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+      .logout {
+        border: none;
+        background: none;
+        text-decoration: underline;
+      }
+      .logout:hover{
+        opacity: 0.5;
+      }
+      .user_name {
+        font-size: 14px;
+      }
 
-header .shop-cart-button:hover,
-header .shop-cart-button.active {
-  color: palevioletred;
-  transform: scale(1.5);
-} */
-        // }
+      .user_icon {
+        img {
+          width: 30px;
+          transition: transform 500ms ease;
+          transition: all 500ms;
+        }
+        img:hover {
+          transform: scale(1.4) translateY(-2px);
+        }
       }
     }
   }

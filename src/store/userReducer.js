@@ -1,12 +1,13 @@
 const defaultState = {
   email: "",
-  token: "",
+  token: 0,
   loading: false,
 };
 
 const setUserEmail = "setUserEmail";
 const setUserToken = "setUserToken";
 const setUserLoading = "setUserLoading";
+const clearUserData = "clearUserData";
 
 export const userDataReducer = (state = defaultState, action) => {
   switch (action.type) {
@@ -26,6 +27,10 @@ export const userDataReducer = (state = defaultState, action) => {
         ...state,
         loading: action.payload,
       };
+    case clearUserData:
+      return {
+        ...defaultState,
+      };
     default:
       return state;
   }
@@ -43,4 +48,8 @@ export const setTokenActions = (payload) => ({
 export const setUserLoadingActions = (payload) => ({
   type: setUserLoading,
   payload,
+});
+
+export const clearUserDataActions = () => ({
+  type: clearUserData,
 });

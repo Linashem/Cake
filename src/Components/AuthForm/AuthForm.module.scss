@@ -1,13 +1,48 @@
 .wrapper {
+  position: relative;
+  width: 100%;
+
+  & > input {
+    font-size: 20px;
+    width: 300px;
+    border-radius: 50px;
+    border: 1px solid #361041;
+    padding: 15px 27px;
+    color: #361041;
+  }
+
+  input::placeholder {
+    font-size: 14px;
+  }
+}
+
+.password_input {
+  width: 100%;
+}
+.password_icon {
+  position: absolute;
+  right: 15px;
+  top: 18px;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  img {
+    max-width: 100%;
+  }
+}
+
+.auth_wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
 
-  &_title {
+  .title {
     margin: 0;
     margin-bottom: 10px;
+    color: #361041;
   }
   .input_group {
     display: flex;
@@ -16,19 +51,28 @@
     gap: 20px;
   }
 
-  &_btn {
+  .btn {
     font-size: 17px;
     padding: 10px 30px;
-    background-color: #434343;
+    background-color: #361041;
     color: #fff;
     border: none;
     text-transform: uppercase;
+    border-radius: 50px;
+    transition: all 500ms;
+  }
+  .btn:hover {
+    transform: scale(1.1);
+  }
+  .btn:disabled {
+    opacity: 0.4;
+  }
+  .btn:disabled:hover {
+    transform: scale(1);
   }
 
   .error {
     color: red;
     font-size: 20px;
   }
-  
- 
 }

@@ -1,10 +1,17 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { routes } from "../../../Helper/Conatants/routes";
+import { clearUserDataActions } from "../../../store/userReducer";
 import style from "./Header.module.scss";
 
 export default function Header() {
   const state = useSelector((state) => state.cart.cart);
+  const userName = useSelector((state) => state.user.email);
+  const dispatch = useDispatch();
+
+  const logoutHandler = () => {
+    dispatch(clearUserDataActions());
+  };
 
   return (
     <header className={style.header}>
@@ -22,15 +29,25 @@ export default function Header() {
             </li>
             <li className={style.list_item}>Delivery</li>
             <li className={style.list_item}>About us</li>
-
+          </ul>
+          <div className={style.navbar}>
             <Link to={routes.cart}>
               <div className={style.cart}>
                 <img src="img/svg/cart.svg" alt="cart" />
                 <div className={style.cart_score}>{state} </div>
               </div>
             </Link>
-            <Link to={routes.auth}>USER</Link>
-          </ul>
+            {userName ? (
+              <div className={style.user}>
+                <button className={style.logout} onClick={() => logoutHandler()}>logout</button>
+                <p className={style.user_name}>{userName} </p>{" "}
+              </div>
+            ) : (
+              <Link className={style.user_icon} to={routes.auth}>
+                <img src="img/svg/user.svg" alt="login" />
+              </Link>
+            )}
+          </div>
         </nav>
       </div>
     </header>

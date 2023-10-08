@@ -2,7 +2,8 @@ export const routes = {
   home: '/',
   cart:'/cart',
   shop:'/shop',
-  good:'/good'
+  good:'/good',
+  auth: '/auth',
 
   // oneGood: '/shop/:goodId',
 
@@ -16,6 +17,5 @@ export const routes = {
   // kitchen: '/kitchen',
   // bedRoom: '/bedRoom',
   // bathRoom: '/bathRoom',
-  // auth: '/auth',
   // notFound: '*',
 };

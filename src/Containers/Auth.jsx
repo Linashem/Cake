@@ -5,7 +5,6 @@ import { AuthForm } from "../Components/AuthForm/AuthForm";
 import { setUserLoadingActions } from "../store/userReducer";
 import { routes } from "../Helper/Conatants/routes";
 
-
 export const Auth = () => {
   const loading = useSelector((state) => state.user.loading);
   const token = useSelector((state) => state.user.token);
@@ -16,11 +15,7 @@ export const Auth = () => {
     if (token) {
       dispatch(setUserLoadingActions(false));
       navigate(routes.home);
-  
     }
-}, [token]);
-  return (<>
-    {loading ? <h1>Loading...</h1> : <AuthForm />}
-    </>
-);
+  }, [token]);
+  return <>{loading ? <h1>Loading...</h1> : <AuthForm />}</>;
 };

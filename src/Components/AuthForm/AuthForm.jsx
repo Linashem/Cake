@@ -18,13 +18,11 @@ export const AuthForm = () => {
   const [look, setLook] = useState(false);
   const [type, setType] = useState("password");
 
-
   const dispatch = useDispatch();
 
   useEffect(() => {
     if (emailError || passwordError) {
       setFormValid(false);
-    
     } else {
       setFormValid(true);
     }
@@ -84,9 +82,11 @@ export const AuthForm = () => {
 
   return (
     <div className={style.auth_wrapper}>
-      <h1 className={style.title}>Registration</h1> 
+      <h1 className={style.title}>Registration</h1>
       <div className={style.input_group}>
-        {emailDirty && emailError && <div className={style.error}> {emailError} </div>}
+        {emailDirty && emailError && (
+          <div className={style.error}> {emailError} </div>
+        )}
         <div className={style.wrapper}>
           <input
             onChange={(e) => emailHandler(e)}
@@ -96,7 +96,9 @@ export const AuthForm = () => {
             type="text"
             placeholder="Please enter your email"
           />
-          {passwordlDirty && passwordError && <div className={style.error}> {passwordError} </div>}
+          {passwordlDirty && passwordError && (
+            <div className={style.error}> {passwordError} </div>
+          )}
         </div>
         <div className={style.wrapper}>
           <input
@@ -117,12 +119,12 @@ export const AuthForm = () => {
           </div>
         </div>
       </div>
-      <button className={style.btn}
+      <button
+        className={style.btn}
         disabled={!formValid}
         onClick={() => {
           sendUserData();
         }}
-        
       >
         Send
       </button>

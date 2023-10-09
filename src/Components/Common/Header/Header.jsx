@@ -28,6 +28,7 @@ export default function Header() {
               <Link to={routes.shop}>Shop</Link>
             </li>
             <li className={style.list_item}>Delivery</li>
+            <Link to={routes.blog}>Blog</Link>
             <li className={style.list_item}>About us</li>
           </ul>
           <div className={style.navbar}>
@@ -39,7 +40,12 @@ export default function Header() {
             </Link>
             {userName ? (
               <div className={style.user}>
-                <button className={style.logout} onClick={() => logoutHandler()}>logout</button>
+                <button
+                  className={style.logout}
+                  onClick={() => logoutHandler()}
+                >
+                  logout
+                </button>
                 <p className={style.user_name}>{userName} </p>{" "}
               </div>
             ) : (

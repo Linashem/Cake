@@ -4,10 +4,9 @@ export const routes = {
   shop:'/shop',
   good:'/good',
   auth: '/auth',
+  blog: '/blog',
 
-  // oneGood: '/shop/:goodId',
 
-  // blog: '/blog',
   // onePost: '/blog/:postId',
   // aboutUs: '/aboutUs',
   // contact: '/contact',

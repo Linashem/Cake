@@ -6,8 +6,6 @@ const defaultState = {
 };
 const goods = "goods";
 const category = "category";
-const newTaste = "newTaste";
-
 export const goodsReducer = (state = defaultState, action) => {
   switch (action.type) {
     case goods:
@@ -28,11 +26,6 @@ export const goodsReducer = (state = defaultState, action) => {
           }
         ),
       };
-    // case newTaste:
-    //   return {
-    //     ...state,
-    //     categoryGoods: state.goods.filter((el) => el.newTaste ),
-    //   };
     default:
       return state;
   }
@@ -42,10 +35,6 @@ export const goodsActions = () => ({
   type: goods,
 });
 
-// export const newTasteActions = (payload) => ({
-//   type: newTaste,
-//   payload,
-// });
 
 export const categoryActions = (payload) => ({
   type: category,

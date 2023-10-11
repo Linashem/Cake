@@ -9,3 +9,4 @@ export const fetchPosts = () => {
     dispatch(getPostsActions(resp.data));
   };
 };
+

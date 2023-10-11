@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchPosts } from "../asyncActions/posts";
-import { BlogContent } from "../BlogContent/BlogContent";
+import { BlogContent } from "../Components/BlogContent/BlogContent";
 
 export const Blog = () => {
   const posts = useSelector((state)=>state.posts.posts)

@@ -1,7 +1,7 @@
-import { goodData } from "../Helper/arrays/listOfGoods";
+// import { goodData } from "../Helper/arrays/listOfGoods";
 
 const defaultState = {
-  goods: goodData,
+  goods: [],
   categoryGoods: [],
 };
 const goods = "goods";
@@ -11,7 +11,7 @@ export const goodsReducer = (state = defaultState, action) => {
     case goods:
       return {
         ...state,
-        goods: [...state.goods],
+        goods: action.payload,
       };
     case category:
       return {
@@ -31,12 +31,14 @@ export const goodsReducer = (state = defaultState, action) => {
   }
 };
 
-export const goodsActions = () => ({
+export const getGoodsActions = (repos) => ({
   type: goods,
+  payload:repos,
+
 });
 
 
 export const categoryActions = (payload) => ({
   type: category,
-  payload,
+  payload
 });

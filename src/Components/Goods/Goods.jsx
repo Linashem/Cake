@@ -8,9 +8,13 @@ import { CartOnGood } from "../CartOnGood/CartOnGood";
 import { Stars } from "../Stars/Stars";
 import style from "./Goods.module.scss";
 import { oneGoodActions } from "../../store/oneGoodReduser";
+import React, { useEffect } from "react";
+import { fetchGoods } from "../../asyncActions/goods";
+
+
 
 export const Goods = () => {
-  const goods = useSelector((state) => state.goods.categoryGoods);
+  // const goods = useSelector((state) => state.goods.categoryGoods);
   const dispatch = useDispatch();
 
 
@@ -18,6 +22,11 @@ export const Goods = () => {
     dispatch(oneGoodActions(item));
   };
 
+  const goods = useSelector((state)=>state.goods.goods)
+  useEffect(() => {
+    dispatch(fetchGoods())
+    console.log(goods);
+  }, []);
   return (
     <div className={style.goods_cards}>
       {goods.map((el) => (

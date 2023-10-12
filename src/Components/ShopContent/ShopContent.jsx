@@ -6,7 +6,7 @@ export const ShopContent = () => {
   
   return (
     <div>
-      {/* <Categories /> */}
+      <Categories />
       <Goods />
     </div>
   );

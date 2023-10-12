@@ -3,6 +3,7 @@
 const defaultState = {
   goods: [],
   categoryGoods: [],
+  category:''
 };
 const goods = "goods";
 const category = "category";
@@ -16,15 +17,16 @@ export const goodsReducer = (state = defaultState, action) => {
     case category:
       return {
         ...state,
-        categoryGoods: state.goods.filter(
-          (el) => {
-            if (action.payload === "all") {
-              return [state.goods];
-            } else {
-              return el.category === action.payload;
-            }
-          }
-        ),
+        // categoryGoods: state.goods.filter(
+        //   (el) => {
+        //     if (action.payload === "all") {
+        //       return [state.goods];
+        //     } else {
+        //       return el.category === action.payload;
+        //     }
+        //   }
+        // ),
+        category:action.payload
       };
     default:
       return state;

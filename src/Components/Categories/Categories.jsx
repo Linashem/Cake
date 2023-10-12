@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { categoryActions, newTasteActions } from "../../store/goodsReducer";
 import { NewTastes } from "../NewTastes/NewTastes";
+import { fetchGoodsCategory } from "../../asyncActions/goods";
 
 export const Categories = () => {
   const categories = [
@@ -44,7 +45,7 @@ export const Categories = () => {
   return (
     <div className={style.categories_wrapper}>
       {categories.map((el) => (
-        <button className={style.category} key={el.key} onClick={() => chooseCategory(el.name)}>
+        <button className={style.category} key={el.key} onClick={() =>(dispatch( fetchGoodsCategory(el.name)))}>
           {el.name}
         </button>
       ))}

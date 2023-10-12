@@ -1,12 +1,11 @@
-// import { goodData } from "../Helper/arrays/listOfGoods";
-
 const defaultState = {
   goods: [],
-  categoryGoods: [],
-  category:''
+  category: "",
+  newTastes: 0,
 };
 const goods = "goods";
 const category = "category";
+const newTastes = "newTastes";
 export const goodsReducer = (state = defaultState, action) => {
   switch (action.type) {
     case goods:
@@ -17,16 +16,12 @@ export const goodsReducer = (state = defaultState, action) => {
     case category:
       return {
         ...state,
-        // categoryGoods: state.goods.filter(
-        //   (el) => {
-        //     if (action.payload === "all") {
-        //       return [state.goods];
-        //     } else {
-        //       return el.category === action.payload;
-        //     }
-        //   }
-        // ),
-        category:action.payload
+        category: action.payload,
+      };
+    case newTastes:
+      return {
+        ...state,
+        newTastes: action.payload,
       };
     default:
       return state;
@@ -35,12 +30,15 @@ export const goodsReducer = (state = defaultState, action) => {
 
 export const getGoodsActions = (repos) => ({
   type: goods,
-  payload:repos,
-
+  payload: repos,
 });
-
 
 export const categoryActions = (payload) => ({
   type: category,
-  payload
+  payload,
+});
+
+export const newTastesActions = (payload) => ({
+  type: newTastes,
+  payload,
 });

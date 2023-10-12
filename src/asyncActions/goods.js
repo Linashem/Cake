@@ -23,3 +23,9 @@ export const fetchGoodsCategory = (value) => {
     }
   };
 };
+export const fetchGoodsNew = () => {
+  return async (dispatch) => {
+    const resp = await axios.get(`${apiUrlG}?newTaste=true`);
+    dispatch(getGoodsActions(resp.data));
+  };
+};

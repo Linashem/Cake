@@ -1,32 +1,20 @@
-// import { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { routes } from "../../Helper/Conatants/routes";
 import { useDispatch } from "react-redux";
-
 import { CartOnGood } from "../CartOnGood/CartOnGood";
 import { Stars } from "../Stars/Stars";
 import style from "./Goods.module.scss";
 import { oneGoodActions } from "../../store/oneGoodReduser";
-import React, { useEffect } from "react";
-import { fetchGoods } from "../../asyncActions/goods";
+import React from "react";
 
-
-
-export const Goods = () => {
-  // const goods = useSelector((state) => state.goods.categoryGoods);
+export const Goods = (props) => {
+  const goods = props.goods;
   const dispatch = useDispatch();
-
 
   const goToGood = (item) => {
     dispatch(oneGoodActions(item));
   };
 
-  const goods = useSelector((state)=>state.goods.goods)
-  useEffect(() => {
-    dispatch(fetchGoods())
-    console.log(goods);
-  }, []);
   return (
     <div className={style.goods_cards}>
       {goods.map((el) => (
@@ -40,6 +28,7 @@ export const Goods = () => {
                 <h2 className={style.item_title}>{el.title}</h2>
               </Link>
               <p className={style.item_desc}>{el.desc}</p>
+              {el.newTaste && <div>new</div>}
               <Stars />
               <div className={style.item_footer}>
                 <b className={style.item_price}>{el.price}$</b>

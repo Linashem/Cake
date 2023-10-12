@@ -2,8 +2,6 @@ import React from "react";
 import { Repo } from "./ListItem";
 
 export const BlogContent = (props) => {
-// const repo=props.repo
-
   return (
     <div>
       <h1>Blog</h1>

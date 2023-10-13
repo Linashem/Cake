@@ -9,63 +9,67 @@
     margin-top: 40px;
     margin-bottom: 30px;
   }
+  .desc {
+    padding: 0 5px;
+  }
   .link_block {
     margin: 20px 0;
   }
   .link {
     font-weight: 600;
   }
-
   .link:hover > img {
     padding-left: 10px;
   }
-
   .cards {
     width: 100%;
-    height: 100%;
     display: flex;
-    height: 600px;
-    gap: 50px;
-
+    gap: 30px;
     .card1 {
       padding-top: 30px;
       height: 100%;
-      grid-area: a;
       img {
         width: 100%;
-        height: 600px;
         border-radius: 80px 0 0 0;
       }
     }
     .card2 {
       height: 100%;
-      grid-area: b;
-
       img {
         width: 100%;
-        height: 600px;
       }
     }
     .card3 {
       padding-top: 30px;
-      grid-area: c;
       height: 100%;
       position: relative;
 
       img {
         width: 100%;
-        height: 600px;
         border-radius: 0 0 80px 0;
       }
     }
   }
 }
 
-@media  (max-width: 600px) {
+@media (max-width: 520px) {
+  .card1,
+  .card3 {
+    display: none;
+  }
   .cards {
-    .card1,
-    .card3 {
-      display: none;
+    img {
+      height: 300px;
     }
+    height: 300px;
+    justify-content: center;
+  }
+  .desc {
+    max-width: 350px;
+    font-size: 18px;
+    text-align: center;
+  }
+  .title {
+    font-size: 24px;
   }
 }

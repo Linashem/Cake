@@ -37,7 +37,6 @@ export const NewTastes = () => {
         </div>
         <div className={style.card3}>
           <img src="img/taste3.png" alt="new-taste" />
-
           <div className={style.overlay}></div>
         </div>
       </div>

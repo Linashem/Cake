@@ -27,3 +27,23 @@
   max-width: 1280px;
   height: 550px;
 }
+@media (max-width: 900px) {
+  .slide_img {
+    height: 450px;
+  }
+}
+@media (max-width: 780px) {
+  .slide_img {
+    height: 380px;
+  }
+}
+@media (max-width: 600px) {
+  .slide_img {
+    height: 230px;
+  }
+}
+@media (max-width: 360px) {
+  .slide_img {
+    height: 180px;
+  }
+}

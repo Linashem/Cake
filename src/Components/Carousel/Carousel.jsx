@@ -26,13 +26,19 @@ export const Carousel = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <div className="slide_img1"></div>
+          <div className="slide_img">
+            <img src="img/slide1.png" alt="" />
+          </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="slide_img2"></div>
+          <div className="slide_img">
+            <img src="img/slide2.png" alt="" />
+          </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="slide_img3"></div>
+          <div className="slide_img">
+            <img src="img/slide3.png" alt="" />
+          </div>
         </SwiperSlide>
       </Swiper>
     </>

@@ -16,8 +16,18 @@ export const NewTastes = () => {
     <div className={style.taste_wrapper}>
       <h1 className={style.title}>Our new tastes </h1>
       <p className={style.desc}>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit.{" "}
       </p>
+      <div
+        className={style.link_block}
+        onClick={() => dispatch(fetchGoodsNew())}
+      >
+        <div onClick={() => newTasteHandler()}>
+          <Link className={style.link} to={routes.shop}>
+            Try our new tastes <img src="img/svg/arrow.svg" alt="" />
+          </Link>
+        </div>
+      </div>
       <div className={style.cards}>
         <div className={style.card1}>
           <img src="img/taste1.png" alt="new-taste" />
@@ -27,12 +37,9 @@ export const NewTastes = () => {
         </div>
         <div className={style.card3}>
           <img src="img/taste3.png" alt="new-taste" />
+
+          <div className={style.overlay}></div>
         </div>
-      </div>
-      <div onClick={()=>newTasteHandler()}>
-        <button onClick={() => dispatch(fetchGoodsNew())}>
-          <Link to={routes.shop}>NEEEW</Link>
-        </button>
       </div>
     </div>
   );

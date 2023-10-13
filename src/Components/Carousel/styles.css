@@ -30,36 +30,8 @@ body {
   object-fit: cover;
 }
 
-.slide_img1 {
-  position: relative;
+.slide_img {
   width: 100%;
   max-width: 1280px;
   height: 550px;
-  background: url("/public/img/slide1.jpg") no-repeat;
-  background-size: cover;
-  background-position: center -100px;
-  background-blend-mode: multiply;
-  background-color: #bcbcbc;
-}
-.slide_img2 {
-  position: relative;
-  width: 100%;
-  max-width: 1280px;
-  height: 550px;
-  background: url("/public/img/slide2.jpg") no-repeat;
-  background-size: cover;
-  background-position: center -100px;
-  background-blend-mode: multiply;
-  background-color: #bcbcbc;
-}
-.slide_img3 {
-  position: relative;
-  width: 100%;
-  max-width: 1280px;
-  height: 550px;
-  background: url("/public/img/slide3.jpg") no-repeat;
-  background-size: cover;
-  background-position: center -100px;
-  background-blend-mode: multiply;
-  background-color: #bcbcbc;
 }

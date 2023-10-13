@@ -19,8 +19,8 @@ export const Goods = (props) => {
     <div className={style.goods_cards}>
       {goods.map((el) => (
         <>
-          <div className={style.item}>
-            <Link to={routes.good} onClick={() => goToGood(el)}>
+          <div className={style.item} key={el.id}>
+            <Link className={style.img_link} to={routes.good} onClick={() => goToGood(el)}>
               <img className={style.item_img} src={el.img} alt={""} />
             </Link>
             <div className={style.text}>

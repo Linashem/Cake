@@ -24,7 +24,7 @@ export default function Header() {
           <div className={style.logo_wrapper}>
             <Link to={routes.home}>
               <img className={style.logo} src="img/svg/logo.svg" alt="Cake" />
-              <span> Cake</span>
+              <span className={style.span}> Cake</span>
             </Link>
           </div>
           <ul className={open ? style.list : style.list_hiden}>

@@ -105,7 +105,8 @@
       "category": "birthday cake",
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget hendrerit odio, non ultrices lorem. Donec vel vestibulum eros. Curabitur fringilla arcu varius.",
       "price": 1000,
-      "img": "./img/13.jpg"
+      "img": "./img/13.jpg",
+      "newTaste": true
     },
     {
       "id": 14,
@@ -121,7 +122,9 @@
       "category": "wedding cake",
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget hendrerit odio, non ultrices lorem. Donec vel vestibulum eros. Curabitur fringilla arcu varius.",
       "price": 1000,
-      "img": "./img/15.jpg"
+      "img": "./img/15.jpg",
+      "newTaste": true
+
     }
   ]
 }

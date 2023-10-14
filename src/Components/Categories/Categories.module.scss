@@ -1,8 +1,7 @@
 .categories_wrapper {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 60%;
+  flex-wrap: wrap;
   .category {
     display: inline-block;
     padding: 10px 20px;
@@ -16,5 +15,10 @@
   .category:hover {
     border-color: pink;
     transform: scale(1.1);
+  }
+}
+@media (max-width: 1010px) {
+  .categories_wrapper {
+    padding: 0 10px;
   }
 }

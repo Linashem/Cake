@@ -12,7 +12,7 @@ const rootReduser = combineReducers({
   cart: cartReducer,
   goodsInCart: cartGoodsReducer,
   goods: goodsReducer,
-  good: oneGoodReducer,
+  // good: oneGoodReducer,
   comments: commentReducer,
   user: userDataReducer,
   posts:postsReducer

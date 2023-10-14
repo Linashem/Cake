@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import { getGoodsActions } from "../store/goodsReducer";
+import { getGoodsActions, oneGoodActions } from "../store/goodsReducer";
 
 export const apiUrlG = "http://localhost:3001/goods";
 
@@ -13,7 +13,7 @@ export const fetchGoods = () => {
 export const fetchOneGoods = (id) => {
   return async (dispatch) => {
     const resp = await axios.get(`${apiUrlG}/${id}`);
-    dispatch(getGoodsActions(resp.data));
+    dispatch(oneGoodActions(resp.data));
   };
 };
 

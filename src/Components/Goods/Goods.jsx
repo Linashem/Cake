@@ -4,8 +4,8 @@ import { useDispatch } from "react-redux";
 import { CartOnGood } from "../CartOnGood/CartOnGood";
 import { Stars } from "../Stars/Stars";
 import style from "./Goods.module.scss";
-import { oneGoodActions } from "../../store/oneGoodReduser";
 import React from "react";
+import { oneGoodActions } from "../../store/goodsReducer";
 
 export const Goods = (props) => {
   const goods = props.goods;
@@ -15,12 +15,13 @@ export const Goods = (props) => {
     dispatch(oneGoodActions(item));
   };
 
+
   return (
     <div className={style.goods_cards}>
       {goods.map((el) => (
         <>
           <div className={style.item} key={el.id}>
-            <Link className={style.img_link} to={routes.good} onClick={() => goToGood(el)}>
+            <Link className={style.img_link}  to={`/shop/${el.id}`} onClick={() => goToGood(el)}>
               <img className={style.item_img} src={el.img} alt={""} />
               {el.newTaste && <div className={style.new}>New</div>}
             </Link>

@@ -2,10 +2,12 @@ const defaultState = {
   goods: [],
   category: "",
   newTastes: 0,
+  oneGood:{}
 };
 const goods = "goods";
 const category = "category";
 const newTastes = "newTastes";
+const oneGood= 'oneGood'
 export const goodsReducer = (state = defaultState, action) => {
   switch (action.type) {
     case goods:
@@ -23,6 +25,11 @@ export const goodsReducer = (state = defaultState, action) => {
         ...state,
         newTastes: action.payload,
       };
+      case oneGood:
+        return {
+          ...state,
+          oneGood: action.payload,
+        };
     default:
       return state;
   }
@@ -40,5 +47,10 @@ export const categoryActions = (payload) => ({
 
 export const newTastesActions = (payload) => ({
   type: newTastes,
+  payload,
+});
+
+export const oneGoodActions = (payload) => ({
+  type: oneGood,
   payload,
 });

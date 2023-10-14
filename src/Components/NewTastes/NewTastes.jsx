@@ -14,9 +14,9 @@ export const NewTastes = () => {
   };
   return (
     <div className={style.taste_wrapper}>
-      <h1 className={style.title}>Our new tastes </h1>
+      <h2 className={style.title}>Our new tastes </h2>
       <p className={style.desc}>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit.{" "}
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
       </p>
       <div
         className={style.link_block}

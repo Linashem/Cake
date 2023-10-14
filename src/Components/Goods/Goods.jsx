@@ -26,7 +26,7 @@ export const Goods = (props) => {
               {el.newTaste && <div className={style.new}>New</div>}
             </Link>
             <div className={style.text}>
-              <Link to={routes.good} onClick={() => goToGood(el)}>
+              <Link   to={`/shop/${el.id}`} onClick={() => goToGood(el)}>
                 <h2 className={style.item_title}>{el.title}</h2>
               </Link>
               <p className={style.item_desc}>{el.desc}</p>

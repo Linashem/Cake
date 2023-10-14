@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { Pagewrapper } from "./Components/Common/PageWrapper";
+import { Delivery } from "./Components/Delivery/Delivery";
 import { GoodsInCart } from "./Components/GoodsInCart/GoodsInCart";
 import { Auth } from "./Containers/Auth";
 import { Blog } from "./Containers/Blog";
@@ -18,8 +19,7 @@ function App() {
           <Route path={routes.cart} element={<GoodsInCart />} />
           <Route path={routes.shop} element={<Shop />} />
           <Route path={routes.oneGood} element={<OneGood />} />
-
-          {/* <Route path={routes.good} element={<OneGood />} /> */}
+          <Route path={routes.delivery} element={<Delivery/>} />
           <Route path={routes.auth} element={<Auth />} />
           <Route path={routes.blog} element={<Blog/>} />
           <Route path={routes.notFound} element={<NotFound/>} />

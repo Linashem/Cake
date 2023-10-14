@@ -9,12 +9,10 @@ export const OneGoodContent = (props) => {
       <div className={style.img_block}>
         <img src={props.goodData.img} alt={props.goodData.title} />
       </div>
-
       <div className={style.text_block}>
         <h1 className={style.title}> {props.goodData.title}</h1>
         <Stars />
         <span className={style.desc}>{props.goodData.desc} </span>
-
         <div className={style.footer}>
           <p className={style.price}>{props.goodData.price}$</p>
           <CartOnGood el={props.goodData} />

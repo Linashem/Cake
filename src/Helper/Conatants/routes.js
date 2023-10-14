@@ -1,20 +1,20 @@
 export const routes = {
-  home: '/',
-  cart:'/cart',
-  shop:'/shop',
-  good:'/good',
-  auth: '/auth',
-  blog: '/blog',
-
+  home: "/",
+  cart: "/cart",
+  shop: "/shop",
+  good: "/good",
+  auth: "/auth",
+  blog: "/blog",
+  notFound: "*",
+  aboutUs: "/aboutUs",
+  delivery: "/delivery",
+  oneGood: '/shop/:goodId',
 
   // onePost: '/blog/:postId',
-  // aboutUs: '/aboutUs',
   // contact: '/contact',
-  // cart: '/cart',
 
   // livingRoom: '/livingRoom',
   // kitchen: '/kitchen',
   // bedRoom: '/bedRoom',
   // bathRoom: '/bathRoom',
-  // notFound: '*',
 };

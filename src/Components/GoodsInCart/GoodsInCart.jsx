@@ -24,14 +24,16 @@ export const GoodsInCart = () => {
           goods.map((el) => (
             <>
               <div className={style.good_card}>
-                <div className={style.good_img}>
-                  <img src={el.img} alt={el.title} />
+                <div className={style.card_block}>
+                  <div className={style.good_img}>
+                    <img src={el.img} alt={el.title} />
+                  </div>
                 </div>
                 <h3>{el.title}</h3>
-                <p>{el.price}$</p>
-
-                <Counter item={el} />
-
+                <div className={style.card_block}>
+                  <p>{el.price}$</p>
+                  <Counter item={el} />
+                </div>
                 <div onClick={deliteGood}>
                   <button
                     className={style.cross}

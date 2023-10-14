@@ -10,13 +10,21 @@
   }
   .good_card {
     position: relative;
-    width: 700px;
-    align-items: center;
+    padding: 10px 25px 10px 20px;
+    gap: 40px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     border: 1px solid #ffbbbc;
-    padding: 10px 60px 10px 20px;
     border-radius: 10px;
+    .card_block {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+    }
+    h3 {
+      width: 174px;
+    }
     .good_img {
       width: 150px;
       height: 150px;
@@ -32,8 +40,14 @@
     top: 10px;
     right: 10px;
     border: none;
+    background: none;
     img {
       width: 25px;
     }
+  }
+}
+@media (max-width: 709px) {
+  .good_card {
+    flex-direction: column;
   }
 }

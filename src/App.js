@@ -5,6 +5,7 @@ import { OneGood } from "./Components/OneGood/OneGood";
 import { Auth } from "./Containers/Auth";
 import { Blog } from "./Containers/Blog";
 import { Main } from "./Containers/Main";
+import { NotFound } from "./Containers/NotFound";
 import { Shop } from "./Containers/Shop";
 import { routes } from "./Helper/Conatants/routes";
 
@@ -16,9 +17,13 @@ function App() {
           <Route index element={<Main />} />
           <Route path={routes.cart} element={<GoodsInCart />} />
           <Route path={routes.shop} element={<Shop />} />
+          <Route path={routes.oneGood} element={<OneGood />} />
+
           <Route path={routes.good} element={<OneGood />} />
           <Route path={routes.auth} element={<Auth />} />
           <Route path={routes.blog} element={<Blog/>} />
+          <Route path={routes.notFound} element={<NotFound/>} />
+
           
 
         </Route>

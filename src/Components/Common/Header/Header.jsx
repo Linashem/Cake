@@ -32,13 +32,13 @@ export default function Header() {
               <Link to={routes.shop}>Shop</Link>
             </li>
             <li onClick={() => openHandler()} className={style.list_item}>
-              Delivery
+              <Link to={routes.delivery}> Delivery</Link>
             </li>
             <li onClick={() => openHandler()} className={style.list_item}>
               <Link to={routes.blog}>Blog</Link>
             </li>
             <li onClick={() => openHandler()} className={style.list_item}>
-              About us
+              <Link to={routes.aboutUs}> About us</Link>
             </li>
           </ul>
 

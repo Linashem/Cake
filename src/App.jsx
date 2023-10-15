@@ -19,13 +19,12 @@ function App() {
           <Route index element={<Main />} />
           <Route path={routes.cart} element={<GoodsInCart />} />
           <Route path={routes.shop} element={<Shop />} />
-          <Route path={routes.good} element={<OneGood />}/>
-          <Route path={routes.delivery} element={<Delivery/>} />
+          <Route path={routes.good} element={<OneGood />} />
+          <Route path={routes.delivery} element={<Delivery />} />
           <Route path={routes.auth} element={<Auth />} />
-          <Route path={routes.blog} element={<Blog/>} />
-          <Route path={routes.onePost} element={<OnePost/>} />
-
-          <Route path={routes.notFound} element={<NotFound/>} />
+          <Route path={routes.blog} element={<Blog />} />
+          <Route path={routes.onePost} element={<OnePost />} />
+          <Route path={routes.notFound} element={<NotFound />} />
         </Route>
       </Routes>
     </div>

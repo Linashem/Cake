@@ -1,7 +1,7 @@
-import React from 'react';
-import { Outlet } from 'react-router-dom';
-import Header from '../Header/Header';
-import style from './PageWrapper.module.scss';
+import React from "react";
+import { Outlet } from "react-router-dom";
+import Header from "../Header/Header";
+import style from "./PageWrapper.module.scss";
 
 export const Pagewrapper = () => {
   return (
@@ -10,7 +10,6 @@ export const Pagewrapper = () => {
       <main className={style.content}>
         <Outlet />
       </main>
-      {/* <Footer /> */}
     </div>
   );
 };

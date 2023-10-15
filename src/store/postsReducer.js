@@ -1,10 +1,10 @@
 const defaultState = {
   posts: [],
-  onePost:{}
+  onePost: {},
 };
 
 const getPosts = "getPosts";
-const onePost= 'onePost'
+const onePost = "onePost";
 export const postsReducer = (state = defaultState, action) => {
   switch (action.type) {
     case getPosts:
@@ -12,11 +12,11 @@ export const postsReducer = (state = defaultState, action) => {
         ...state,
         posts: action.payload,
       };
-      case onePost:
-        return {
-          ...state,
-          onePost: action.payload,
-        };
+    case onePost:
+      return {
+        ...state,
+        onePost: action.payload,
+      };
 
     default:
       return state;
@@ -24,9 +24,9 @@ export const postsReducer = (state = defaultState, action) => {
 };
 export const getPostsActions = (repos) => ({
   type: getPosts,
-  payload:repos,
+  payload: repos,
 });
 export const onePostActions = (repo) => ({
   type: onePost,
-  payload:repo,
+  payload: repo,
 });

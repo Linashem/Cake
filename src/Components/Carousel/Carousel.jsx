@@ -18,10 +18,6 @@ export const Carousel = () => {
           delay: 3000,
           disableOnInteraction: false,
         }}
-        // pagination={{
-        //   clickable: true,
-        // }}
-        // navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >

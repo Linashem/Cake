@@ -21,17 +21,16 @@
 }
 
 @media (max-width: 520px) {
+  .blog_title {
+    font-size: 30px;
+  }
+}
 
-    .blog_title {
-      font-size: 30px;
-    }
-  }
-  
 @media (max-width: 400px) {
-    .title {
-      font-size: 18px;
-    }
-    .desc {
-      font-size: 14px;
-    }
+  .title {
+    font-size: 18px;
   }
+  .desc {
+    font-size: 14px;
+  }
+}

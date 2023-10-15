@@ -20,20 +20,20 @@
     .item_img:hover {
       transform: scale(1.05);
     }
-    
-      .new{
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        width: 70px;
-        height: 70px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #f5f5f5;
-        border-radius: 50px;
-      }
-    
+
+    .new {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      width: 70px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f5f5f5;
+      border-radius: 50px;
+    }
+
     .text {
       padding: 20px;
       .item_title,

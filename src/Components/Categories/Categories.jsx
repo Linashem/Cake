@@ -1,8 +1,7 @@
 import style from "./Categories.module.scss";
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { categoryActions, newTastesActions } from "../../store/goodsReducer";
-// import { fetchGoodsCategory } from "../../asyncActions/goods";
+import { categoryActions } from "../../store/goodsReducer";
 export const Categories = () => {
   const categories = [
     {

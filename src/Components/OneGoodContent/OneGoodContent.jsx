@@ -21,7 +21,9 @@ export const OneGoodContent = (props) => {
             <CartOnGood el={props.goodData} />
           </div>
         </div>
-        <Link className={style.back} to={routes.shop}>back</Link>
+        <Link className={style.back} to={routes.shop}>
+          back
+        </Link>
       </div>
     </>
   );

@@ -36,7 +36,7 @@ export const Categories = () => {
         <button
           className={style.category}
           key={el.key}
-          onClick={() => dispatch(newTastesActions(0))}
+          onClick={() => dispatch(categoryActions(el.name))}
         >
           {el.name}
         </button>

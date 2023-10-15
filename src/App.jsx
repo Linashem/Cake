@@ -18,7 +18,7 @@ function App() {
           <Route index element={<Main />} />
           <Route path={routes.cart} element={<GoodsInCart />} />
           <Route path={routes.shop} element={<Shop />} />
-          <Route path={routes.oneGood} element={<OneGood />} />
+          {/* <Route path={routes.oneGood} element={<OneGood />} /> */}
           <Route path={routes.delivery} element={<Delivery/>} />
           <Route path={routes.auth} element={<Auth />} />
           <Route path={routes.blog} element={<Blog/>} />

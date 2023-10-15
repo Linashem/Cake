@@ -7,10 +7,9 @@ import { NewTastes } from "./NewTastes/NewTastes";
 export const MainContent = () => {
   return (
     <>
-    <h1>change in vercel</h1>
       <Carousel />
-      <NewTastes/>
-      <Benefits/>
+      <NewTastes />
+      <Benefits />
       {/* <Comments/> */}
     </>
   );

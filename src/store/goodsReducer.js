@@ -35,9 +35,9 @@ export const goodsReducer = (state = defaultState, action) => {
   }
 };
 
-export const getGoodsActions = (repos) => ({
+export const getGoodsActions = (payload) => ({
   type: goods,
-  payload: repos,
+  payload
 });
 
 export const categoryActions = (payload) => ({

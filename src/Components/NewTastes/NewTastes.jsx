@@ -1,7 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { fetchGoodsNew } from "../../asyncActions/goods";
 import { routes } from "../../Helper/Conatants/routes";
 import { newTastesActions } from "../../store/goodsReducer";
 
@@ -18,15 +17,10 @@ export const NewTastes = () => {
       <p className={style.desc}>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit.
       </p>
-      {/* <div
-        className={style.link_block}
-        onClick={() => dispatch(fetchGoodsNew())}
-      > */}
-        <div onClick={() => newTasteHandler()}>
-          <Link className={style.link} to={routes.shop}>
-            Try our new tastes <img src="img/svg/arrow.svg" alt="" />
-          </Link>
-        {/* </div> */}
+      <div className={style.link_block} onClick={() => newTasteHandler()}>
+        <Link className={style.link} to={routes.shop}>
+          Try our new tastes <img src="img/svg/arrow.svg" alt="" />
+        </Link>
       </div>
       <div className={style.cards}>
         <div className={style.card1}>

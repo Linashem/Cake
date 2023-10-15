@@ -5,13 +5,12 @@ export const routes = {
   good: "/good",
   auth: "/auth",
   blog: "/blog",
-  notFound: "*",
+  onePost: '/blog/:postId',
   aboutUs: "/aboutUs",
   delivery: "/delivery",
+  notFound: "*",
   // oneGood: '/shop/:goodId',
-  // good:'/good'
 
-  // onePost: '/blog/:postId',
   // contact: '/contact',
 
   // livingRoom: '/livingRoom',

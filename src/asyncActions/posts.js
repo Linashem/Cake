@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-import { getPostsActions } from "../store/postsReducer";
+import { getPostsActions, onePostActions } from "../store/postsReducer";
 
 export const apiUrl = "https://jsonplaceholder.typicode.com/posts";
 export const fetchPosts = () => {
@@ -10,3 +10,9 @@ export const fetchPosts = () => {
   };
 };
 
+export const fetchOnePost = (id) => {
+  return async (dispatch) => {
+    const resp = await axios.get(`${apiUrl}/${id}`);
+    dispatch(onePostActions(resp.data));
+  };
+};

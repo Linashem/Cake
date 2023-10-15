@@ -4,8 +4,6 @@ const defaultState = {
   goods: goodData,
   categoryGoods: [],
   newTastes: goodData,
-  newNum: 0,
-  // oneGood: {},
 };
 const goods = "goods";
 const category = "category";
@@ -24,7 +22,7 @@ export const goodsReducer = (state = defaultState, action) => {
           }
         }),
       };
-  
+
     case newTastes:
       if (action.payload === 1) {
         return {
@@ -32,21 +30,7 @@ export const goodsReducer = (state = defaultState, action) => {
           newTastes: state.goods.filter((el) => el.newTaste),
         };
       }
-      break
-
-    // state.goods.filter((el) => {
-    //   if (action.payload === 1) {
-    //     return el.newTaste;
-    //   } else {
-    //     return 5;
-    //   }
-    // }),
-
-    // case oneGood:
-    //   return {
-    //     ...state,
-    //     oneGood: action.payload,
-    //   };
+      break;
     default:
       return state;
   }
@@ -71,4 +55,3 @@ export const oneGoodActions = (payload) => ({
   type: oneGood,
   payload,
 });
-

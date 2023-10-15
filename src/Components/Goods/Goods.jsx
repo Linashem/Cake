@@ -15,20 +15,23 @@ export const Goods = (props) => {
     dispatch(oneGoodActions(item));
   };
 
-
   return (
     <div className={style.goods_cards}>
       {goods.map((el) => (
         <>
           <div className={style.item} key={el.id}>
-            <Link className={style.img_link}  to={routes.good} onClick={() => goToGood(el)}>
+            <Link
+              className={style.img_link}
+              to={routes.good}
+              onClick={() => goToGood(el)}
+            >
               <img className={style.item_img} src={el.img} alt={""} />
               {el.newTaste && <div className={style.new}>New</div>}
             </Link>
             <div className={style.text}>
-              {/* <Link   to={`/shop/${el.id}`} onClick={() => goToGood(el)}> */}
+              <Link to={routes.good} onClick={() => goToGood(el)}>
                 <h2 className={style.item_title}>{el.title}</h2>
-              {/* </Link> */}
+              </Link>
               <p className={style.item_desc}>{el.desc}</p>
               <Stars />
               <div className={style.item_footer}>

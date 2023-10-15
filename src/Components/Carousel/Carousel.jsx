@@ -15,7 +15,7 @@ export const Carousel = () => {
         loop={true}
         centeredSlides={true}
         autoplay={{
-          delay: 3000,
+          delay: 2000,
           disableOnInteraction: false,
         }}
         modules={[Autoplay, Pagination, Navigation]}

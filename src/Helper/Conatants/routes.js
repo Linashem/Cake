@@ -8,7 +8,8 @@ export const routes = {
   notFound: "*",
   aboutUs: "/aboutUs",
   delivery: "/delivery",
-  oneGood: '/shop/:goodId',
+  // oneGood: '/shop/:goodId',
+  // good:'/good'
 
   // onePost: '/blog/:postId',
   // contact: '/contact',

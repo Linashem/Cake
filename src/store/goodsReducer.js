@@ -5,7 +5,7 @@ const defaultState = {
   categoryGoods: [],
   newTastes: goodData,
   newNum: 0,
-  oneGood: {},
+  // oneGood: {},
 };
 const goods = "goods";
 const category = "category";
@@ -42,11 +42,11 @@ export const goodsReducer = (state = defaultState, action) => {
     //   }
     // }),
 
-    case oneGood:
-      return {
-        ...state,
-        oneGood: action.payload,
-      };
+    // case oneGood:
+    //   return {
+    //     ...state,
+    //     oneGood: action.payload,
+    //   };
     default:
       return state;
   }

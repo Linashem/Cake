@@ -5,16 +5,17 @@ import { fetchOneGoods } from '../asyncActions/goods';
 import { OneGoodContent } from '../Components/OneGoodContent/OneGoodContent';
 
 export const OneGood = () => {
-    const { goodId } = useParams();
-    console.log(goodId);
-    const dispatch = useDispatch();
-    const goodData = useSelector((state)=>state.goods.oneGood);
-    useEffect(() => {
-      if (goodId) {
-        dispatch(fetchOneGoods(goodId));
-      }
-      console.log(goodData);
-    }, [goodId]);
+    // const { goodId } = useParams();
+    // console.log(goodId);
+    // const dispatch = useDispatch();
+    // const goodData = useSelector((state)=>state.good.good);
+    const goodData = useSelector((state)=>state.good.good)
+    // useEffect(() => {
+    //   if (goodId) {
+    //     dispatch(fetchOneGoods(goodId));
+    //   }
+    //   console.log(goodData);
+    // }, [goodId]);
   return (
     <OneGoodContent  goodData={goodData} />
   )

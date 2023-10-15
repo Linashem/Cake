@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import { Pagewrapper } from "./Components/Common/PageWrapper";
 import { Delivery } from "./Components/Delivery/Delivery";
 import { GoodsInCart } from "./Components/GoodsInCart/GoodsInCart";
+import { OneGoodContent } from "./Components/OneGoodContent/OneGoodContent";
 import { Auth } from "./Containers/Auth";
 import { Blog } from "./Containers/Blog";
 import { Main } from "./Containers/Main";
@@ -18,7 +19,7 @@ function App() {
           <Route index element={<Main />} />
           <Route path={routes.cart} element={<GoodsInCart />} />
           <Route path={routes.shop} element={<Shop />} />
-          {/* <Route path={routes.oneGood} element={<OneGood />} /> */}
+          <Route path={routes.good} element={<OneGood />}/>
           <Route path={routes.delivery} element={<Delivery/>} />
           <Route path={routes.auth} element={<Auth />} />
           <Route path={routes.blog} element={<Blog/>} />

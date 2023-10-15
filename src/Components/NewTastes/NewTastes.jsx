@@ -18,15 +18,15 @@ export const NewTastes = () => {
       <p className={style.desc}>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit.
       </p>
-      <div
+      {/* <div
         className={style.link_block}
         onClick={() => dispatch(fetchGoodsNew())}
-      >
+      > */}
         <div onClick={() => newTasteHandler()}>
           <Link className={style.link} to={routes.shop}>
             Try our new tastes <img src="img/svg/arrow.svg" alt="" />
           </Link>
-        </div>
+        {/* </div> */}
       </div>
       <div className={style.cards}>
         <div className={style.card1}>

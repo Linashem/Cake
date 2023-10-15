@@ -1,8 +1,8 @@
 import style from "./Categories.module.scss";
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { categoryActions } from "../../store/goodsReducer";
-import { fetchGoodsCategory } from "../../asyncActions/goods";
+import { categoryActions, newTastesActions } from "../../store/goodsReducer";
+// import { fetchGoodsCategory } from "../../asyncActions/goods";
 export const Categories = () => {
   const categories = [
     {
@@ -36,7 +36,7 @@ export const Categories = () => {
         <button
           className={style.category}
           key={el.key}
-          onClick={() => dispatch(fetchGoodsCategory(el.name))}
+          onClick={() => dispatch(newTastesActions(0))}
         >
           {el.name}
         </button>

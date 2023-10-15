@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import style from "./BlogContent.module.scss";
 
-export const Repo = (props) => {
+export const ListItem = (props) => {
   const post = props.post;
 
   return (
